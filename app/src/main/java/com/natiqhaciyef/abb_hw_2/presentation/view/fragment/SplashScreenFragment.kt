@@ -30,7 +30,7 @@ class SplashScreenFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         CoroutineScope(Dispatchers.Main).launch{
             delay(2500)
-            findNavController().navigate(R.id.registerFragment)
+            findNavController().navigate(R.id.loginFragment)
         }
     }
 

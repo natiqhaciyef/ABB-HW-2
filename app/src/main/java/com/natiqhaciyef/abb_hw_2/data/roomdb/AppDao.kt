@@ -7,7 +7,7 @@ import com.natiqhaciyef.abb_hw_2.data.model.UserModel
 interface AppDao {
 
     @Query("SELECT * FROM user_model WHERE name = :name AND password = :password")
-    fun getUser(name: String, password: String): UserModel
+    fun getUser(name: String, password: String): UserModel?
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insertUser(userModel: UserModel)

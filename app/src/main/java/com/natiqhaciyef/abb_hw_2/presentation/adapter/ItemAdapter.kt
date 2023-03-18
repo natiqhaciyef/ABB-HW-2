@@ -11,6 +11,7 @@ import com.natiqhaciyef.abb_hw_2.databinding.RecyclerItemRowBinding
 class ItemAdapter(val mContext: Context, val list: MutableList<ItemModel>) :
     RecyclerView.Adapter<ItemAdapter.ItemHolder>() {
 
+    var onClick: ( (ItemModel) -> Unit)? = null
     inner class ItemHolder(val binding: RecyclerItemRowBinding) :
         RecyclerView.ViewHolder(binding.root)
 
@@ -29,5 +30,8 @@ class ItemAdapter(val mContext: Context, val list: MutableList<ItemModel>) :
         view.itemPriceText.text = "Rs ${item.price}"
         Glide.with(mContext).load(item.image).into(view.itemImage)
 
+        holder.itemView.setOnClickListener {
+            onClick?.invoke(item)
+        }
     }
 }

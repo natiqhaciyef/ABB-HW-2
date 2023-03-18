@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 import com.natiqhaciyef.abb_hw_2.R
 import com.natiqhaciyef.abb_hw_2.databinding.FragmentDetailsBinding
 
@@ -23,6 +25,10 @@ class DetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val data: DetailsFragmentArgs by navArgs()
+        val itemModel = data.itemModel
+        binding.itemModel = itemModel
+        Glide.with(requireView()).load(itemModel.image).into(binding.itemImageView)
     }
 
     override fun onDestroy() {

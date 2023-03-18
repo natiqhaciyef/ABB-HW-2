@@ -16,4 +16,7 @@
     <string name="login_title_text"><![CDATA[Login with username & password]]></string>
     <string name="shoppers_text">Shoppers</string>
     <string name="sign_out_text">Sign out</string>
+    <string name="add_to_cart_text">Add to Cart</string>
+    <string name="more_details_text">More Details</string>
+    <string name="detail_info">Gear up with the latest collections from adidas Originals, Running, Football, Training With over 20,000+ products, you will never run out of choice. Grab your favorites now. Secure Payments. 100% Original Products. Gear up with adidas.</string>
 </resources>

@@ -46,7 +46,11 @@
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.natiqhaciyef.abb_hw_2.presentation.view.fragment.DetailsFragment"
-        android:label="DetailsFragment" />
+        android:label="DetailsFragment" >
+        <argument
+            android:name="itemModel"
+            app:argType="com.natiqhaciyef.abb_hw_2.data.model.ItemModel" />
+    </fragment>
     <fragment
         android:id="@+id/cartFragment"
         android:name="com.natiqhaciyef.abb_hw_2.presentation.view.fragment.CartFragment"
