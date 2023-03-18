@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ABB-HW-2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_in_text">Sign in</string>
+    <string name="already_have_an_account_text">Already have an account?</string>
+    <string name="password_text">Password</string>
+    <string name="email_text">Email</string>
+    <string name="name_text">Name</string>
+    <string name="create_a_new_account_text">Create a new account</string>
+    <string name="welcome_text">Welcome!</string>
+    <string name="sign_up_text">Sign up</string>
+    <string name="create_new_account_text">Create new account?</string>
+    <string name="username_text">Username</string>
+    <string name="welcome_back_text">Welcome back!</string>
+    <string name="login_title_text"><![CDATA[Login with username & password]]></string>
+    <string name="shoppers_text">Shoppers</string>
+    <string name="sign_out_text">Sign out</string>
+</resources>
