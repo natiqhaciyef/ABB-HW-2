@@ -10,6 +10,7 @@ import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.natiqhaciyef.abb_hw_2.R
 import com.natiqhaciyef.abb_hw_2.databinding.FragmentDetailsBinding
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class DetailsFragment : Fragment() {
@@ -25,9 +26,11 @@ class DetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        requireActivity().bottomNavigationView.visibility = View.GONE
         val data: DetailsFragmentArgs by navArgs()
         val itemModel = data.itemModel
         binding.itemModel = itemModel
+        binding.itemDetailsPrice.text = itemModel.price.toString()
         Glide.with(requireView()).load(itemModel.image).into(binding.itemImageView)
     }
 

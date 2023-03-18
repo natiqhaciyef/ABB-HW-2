@@ -115,7 +115,7 @@
                 android:layout_marginHorizontal="35dp"
                 android:layout_marginTop="25dp"
                 android:background="@drawable/custom_button_background"
-                android:text="Sign up"
+                android:text="@string/sign_up_text"
                 android:textAllCaps="true"
                 android:textColor="@color/red"
                 android:textSize="17sp" />

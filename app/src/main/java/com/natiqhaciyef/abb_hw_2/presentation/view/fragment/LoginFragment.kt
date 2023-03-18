@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.natiqhaciyef.abb_hw_2.R
 import com.natiqhaciyef.abb_hw_2.databinding.FragmentLoginBinding
@@ -32,8 +33,9 @@ class LoginFragment : Fragment() {
             val username = binding.nameText.text
             val password = binding.passwordText.text
             if (username.isNotEmpty() && password.isNotEmpty()) {
-                val user = viewModel.checkUser(username.toString(), password.toString())
-                Log.d("USERNAME CHECKER", "$user")
+                viewModel.checkUser(username.toString(), password.toString()){
+                   findNavController().navigate(R.id.homeScreen)
+                }
             }
         }
 

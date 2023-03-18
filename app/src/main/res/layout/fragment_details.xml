@@ -88,7 +88,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:paddingStart="40dp"
-                android:text="@{itemModel.price}"
                 android:textColor="@color/black"
                 android:textSize="23sp"
                 android:textStyle="bold"

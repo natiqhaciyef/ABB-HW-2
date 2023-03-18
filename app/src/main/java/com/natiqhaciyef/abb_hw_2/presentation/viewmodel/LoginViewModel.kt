@@ -8,15 +8,20 @@ import com.natiqhaciyef.abb_hw_2.data.model.UserModel
 import com.natiqhaciyef.abb_hw_2.data.repository.DatabaseRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
-class LoginViewModel(application: Application): AndroidViewModel(application) {
+class LoginViewModel(application: Application) : AndroidViewModel(application) {
     private val context = getApplication<Application>().applicationContext
     var repository = DatabaseRepository(context)
 
-    fun checkUser(username: String, password:String) =
+    fun checkUser(username: String, password: String, content: () -> Unit) {
         viewModelScope.launch(Dispatchers.IO) {
-            Log.d("USER CHECKER","${repository.getUsers(username, password)}")
-            repository.getUsers(username, password)
+            var user = repository.getUsers(username, password)
+            withContext(Dispatchers.Main){
+                if (user != null)
+                    content()
+            }
         }
+    }
 
 }
