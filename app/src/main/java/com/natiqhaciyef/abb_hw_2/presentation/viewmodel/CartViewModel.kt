@@ -1,27 +1,30 @@
 package com.natiqhaciyef.abb_hw_2.presentation.viewmodel
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.natiqhaciyef.abb_hw_2.data.model.UserModel
+import com.natiqhaciyef.abb_hw_2.data.model.CartItemModel
 import com.natiqhaciyef.abb_hw_2.data.repository.DatabaseRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class LoginViewModel(application: Application) : AndroidViewModel(application) {
+class CartViewModel(application: Application) : AndroidViewModel(application) {
     private val context = getApplication<Application>().applicationContext
-    var repository = DatabaseRepository(context)
+    val repository = DatabaseRepository(context)
+    val liveData = MutableLiveData<MutableList<CartItemModel?>>()
 
-    fun checkUser(username: String, password: String, content: () -> Unit) {
+    init {
+        getCartItems()
+    }
+
+    private fun getCartItems(){
         viewModelScope.launch(Dispatchers.IO) {
-            val user = repository.getUsers(username, password)
+            val list = repository.getCartItems().toMutableList()
             withContext(Dispatchers.Main){
-                if (user != null)
-                    content()
+                liveData.value = list
             }
         }
     }
-
 }

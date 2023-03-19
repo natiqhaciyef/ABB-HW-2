@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="30dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/cartImageView"
+            android:layout_width="145dp"
+            android:layout_height="120dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <LinearLayout
+            android:id="@+id/cartLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cartImageView"
+            android:layout_margin="10dp"
+            >
+
+            <TextView
+                android:id="@+id/cartNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="dncsklcns"
+                android:paddingStart="20dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/cartCountText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="dncsklcns"
+                android:layout_marginTop="10dp"
+                android:paddingStart="20dp"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/cartTotalPriceText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="dncsklcns"
+                android:layout_marginTop="10dp"
+                android:paddingStart="20dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -47,7 +47,9 @@ class RegisterFragment : Fragment() {
                         email = email.toString(),
                         password = password.toString()
                     )
-                )
+                ){
+                    findNavController().navigate(R.id.loginFragment)
+                }
             }
         }
     }
