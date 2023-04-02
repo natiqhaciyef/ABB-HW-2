@@ -7,15 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.natiqhaciyef.abb_hw_2.R
 import com.natiqhaciyef.abb_hw_2.data.model.CartItemModel
 import com.natiqhaciyef.abb_hw_2.databinding.FragmentDetailsBinding
 import com.natiqhaciyef.abb_hw_2.presentation.viewmodel.DetailsViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
-
+@AndroidEntryPoint
 class DetailsFragment : Fragment() {
     private var _binding: FragmentDetailsBinding? = null
     private val binding get() = _binding!!
@@ -49,6 +51,10 @@ class DetailsFragment : Fragment() {
                     count = 1
                 )
             )
+        }
+
+        binding.goBack.setOnClickListener {
+            Navigation.findNavController(it).popBackStack()
         }
     }
 

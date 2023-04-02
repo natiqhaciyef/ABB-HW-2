@@ -12,9 +12,11 @@ import com.natiqhaciyef.abb_hw_2.R
 import com.natiqhaciyef.abb_hw_2.data.util.ItemList
 import com.natiqhaciyef.abb_hw_2.databinding.FragmentHomeScreenBinding
 import com.natiqhaciyef.abb_hw_2.presentation.adapter.ItemAdapter
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
 
+@AndroidEntryPoint
 class HomeScreen : Fragment() {
     private var _binding: FragmentHomeScreenBinding? = null
     private val binding get() = _binding!!

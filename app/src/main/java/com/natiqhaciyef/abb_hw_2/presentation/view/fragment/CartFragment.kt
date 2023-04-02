@@ -12,8 +12,9 @@ import com.natiqhaciyef.abb_hw_2.data.model.CartItemModel
 import com.natiqhaciyef.abb_hw_2.databinding.FragmentCartBinding
 import com.natiqhaciyef.abb_hw_2.presentation.adapter.CartAdapter
 import com.natiqhaciyef.abb_hw_2.presentation.viewmodel.CartViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class CartFragment : Fragment() {
     private var _binding : FragmentCartBinding? = null
     private val binding get() = _binding!!
@@ -40,6 +41,8 @@ class CartFragment : Fragment() {
             val adapter = CartAdapter(requireContext(), list)
             binding.cartRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
             binding.cartRecyclerView.adapter = adapter
+
+
 
             var totalPrice = 0
             list.forEach { it?.let { totalPrice += it.price } }
