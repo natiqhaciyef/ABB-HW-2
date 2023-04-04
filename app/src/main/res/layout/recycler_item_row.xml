@@ -4,7 +4,8 @@
     android:layout_width="185dp"
     android:layout_height="255dp"
     android:layout_margin="5dp"
-    app:cardCornerRadius="20dp">
+    app:cardCornerRadius="20dp"
+    android:id="@+id/recyclerRowItem">
 
     <LinearLayout
         android:layout_width="match_parent"

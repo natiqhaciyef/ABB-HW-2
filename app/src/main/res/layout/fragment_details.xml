@@ -99,7 +99,7 @@
                 android:id="@+id/addToCartButton"
                 android:layout_width="240dp"
                 android:layout_height="55dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="100dp"
                 android:background="@drawable/custom_button_background"
                 android:text="@string/add_to_cart_text"
                 android:textAllCaps="false"
@@ -135,6 +135,34 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 />
 
+            <com.natiqhaciyef.abb_hw_2.presentation.customview.CustomView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:color_selector="@color/red"
+                app:layout_constraintBottom_toTopOf="@id/addToCartButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/itemDetailsPrice" />
+
+            <com.natiqhaciyef.abb_hw_2.presentation.customview.CustomView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:color_selector="@color/blue"
+                app:layout_constraintBottom_toTopOf="@id/addToCartButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintTop_toBottomOf="@+id/itemDetailsPrice" />
+
+            <com.natiqhaciyef.abb_hw_2.presentation.customview.CustomView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:color_selector="@color/gray"
+                app:layout_constraintBottom_toTopOf="@id/addToCartButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintTop_toBottomOf="@+id/itemDetailsPrice" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
