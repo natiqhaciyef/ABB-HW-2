@@ -6,14 +6,18 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.natiqhaciyef.abb_hw_2.data.model.UserModel
 import com.natiqhaciyef.abb_hw_2.data.repository.DatabaseRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 import kotlin.coroutines.coroutineContext
 
-class RegisterViewModel(application: Application) : AndroidViewModel(application) {
-    private val context = getApplication<Application>().applicationContext
-    var repository = DatabaseRepository(context)
+@HiltViewModel
+class RegisterViewModel @Inject constructor(
+    application: Application,
+    var repository: DatabaseRepository
+) : AndroidViewModel(application) {
 
     fun insertUser(userModel: UserModel, content: () -> Unit){
         viewModelScope.launch(Dispatchers.IO) {

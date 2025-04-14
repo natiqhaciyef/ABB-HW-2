@@ -13,8 +13,10 @@ import androidx.navigation.fragment.navArgs
 import com.natiqhaciyef.abb_hw_2.R
 import com.natiqhaciyef.abb_hw_2.databinding.FragmentLoginBinding
 import com.natiqhaciyef.abb_hw_2.presentation.viewmodel.LoginViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!

@@ -9,12 +9,14 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.natiqhaciyef.abb_hw_2.R
 import com.natiqhaciyef.abb_hw_2.databinding.FragmentSplashScreenBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 
+@AndroidEntryPoint
 class SplashScreenFragment : Fragment() {
     private var _binding: FragmentSplashScreenBinding? = null
     private val binding get() = _binding!!

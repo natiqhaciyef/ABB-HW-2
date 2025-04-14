@@ -11,8 +11,10 @@ import com.natiqhaciyef.abb_hw_2.R
 import com.natiqhaciyef.abb_hw_2.data.model.UserModel
 import com.natiqhaciyef.abb_hw_2.databinding.FragmentRegisterBinding
 import com.natiqhaciyef.abb_hw_2.presentation.viewmodel.RegisterViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class RegisterFragment : Fragment() {
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
